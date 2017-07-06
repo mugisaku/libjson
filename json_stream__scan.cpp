@@ -118,6 +118,8 @@ scan_object()
 
       obj.emplace_back(scan_objectmember());
 
+      skip_spaces();
+
         if(*current_pointer == ',')
         {
           current_pointer += 1;
@@ -297,6 +299,8 @@ scan_array()
         
 
       arr.emplace_back(get_value());
+
+      skip_spaces();
 
         if(*current_pointer == ',')
         {
